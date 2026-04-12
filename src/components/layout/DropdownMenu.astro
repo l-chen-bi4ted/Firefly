@@ -69,9 +69,9 @@ const hasChildren = processedLink.children && processedLink.children.length > 0;
 					>
 						{child.icon && (
 							child.icon.startsWith('/') || child.icon.endsWith('.svg') ? (
-								<img src={child.icon} alt="" class="w-[1.25rem] h-[1.25rem] mr-3 navbar-icon" \/>
+								<img src={child.icon} alt="" class="w-[1.25rem] h-[1.25rem] mr-3 navbar-icon" />
 							) : (
-								<Icon name={child.icon} class="text-[1.25rem] mr-3 navbar-icon" \/>
+								<Icon name={child.icon} class="text-[1.25rem] mr-3 navbar-icon" />
 							)
 						)}
 						<span>{child.name}</span>
@@ -92,9 +92,9 @@ const hasChildren = processedLink.children && processedLink.children.length > 0;
 			<div class="flex items-center gap-1.5">
 				{processedLink.icon && (
 					processedLink.icon.startsWith('/') || processedLink.icon.endsWith('.svg') ? (
-						<img src={processedLink.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-1.5 navbar-icon" \/>
+						<img src={processedLink.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-1.5 navbar-icon" />
 					) : (
-						<Icon name={processedLink.icon} class="text-[1.1rem] mr-1.5 navbar-icon" \/>
+						<Icon name={processedLink.icon} class="text-[1.1rem] mr-1.5 navbar-icon" />
 					)
 				)}
 				{processedLink.name}

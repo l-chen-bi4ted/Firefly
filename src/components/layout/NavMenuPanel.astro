@@ -34,9 +34,9 @@ const processedLinks = Astro.props.links.map((link: NavBarLink) => ({
                         <div class="flex items-center transition text-black/75 dark:text-white/75 font-bold group-hover:text-(--primary) group-active:text-(--primary)">
                             {link.icon && (
                                 link.icon.startsWith('/') || link.icon.endsWith('.svg') ? (
-                                    <img src={link.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" \/>
+                                    <img src={link.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" />
                                 ) : (
-                                    <Icon name={link.icon} class="text-[1.1rem] mr-2" \/>
+                                    <Icon name={link.icon} class="text-[1.1rem] mr-2" />
                                 )
                             )}
                             {link.name}
@@ -55,9 +55,9 @@ const processedLinks = Astro.props.links.map((link: NavBarLink) => ({
                                 <div class="flex items-center transition text-black/60 dark:text-white/60 font-medium group-hover:text-(--primary) group-active:text-(--primary)">
                                     {child.icon && (
                                         child.icon.startsWith('/') || child.icon.endsWith('.svg') ? (
-                                            <img src={child.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" \/>
+                                            <img src={child.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" />
                                         ) : (
-                                            <Icon name={child.icon} class="text-[1.1rem] mr-2" \/>
+                                            <Icon name={child.icon} class="text-[1.1rem] mr-2" />
                                         )
                                     )}
                                     {child.name}
@@ -79,9 +79,9 @@ const processedLinks = Astro.props.links.map((link: NavBarLink) => ({
                     <div class="flex items-center transition text-black/75 dark:text-white/75 font-bold group-hover:text-(--primary) group-active:text-(--primary)">
                         {link.icon && (
                             link.icon.startsWith('/') || link.icon.endsWith('.svg') ? (
-                                <img src={link.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" \/>
+                                <img src={link.icon} alt="" class="w-[1.1rem] h-[1.1rem] mr-2" />
                             ) : (
-                                <Icon name={link.icon} class="text-[1.1rem] mr-2" \/>
+                                <Icon name={link.icon} class="text-[1.1rem] mr-2" />
                             )
                         )}
                         {link.name}
