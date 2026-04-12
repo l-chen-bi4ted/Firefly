@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "枕心散人",
 
 	// 个人签名
-	bio: "是笼囚天地，抑或是天地本在盏中？",
+	bio: "是笼囚天地，抑或天地本在盏中",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
