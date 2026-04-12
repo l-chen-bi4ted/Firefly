@@ -74,7 +74,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				name: "Solian",
 				url: "https://solian.app/accounts/echo42",
 				external: true,
-				icon: "fa7-solid:leaf",
+				icon: "/assets/icons/solian.svg",
 			},
 		],
 	});
