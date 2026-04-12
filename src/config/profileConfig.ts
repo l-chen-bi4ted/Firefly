@@ -6,13 +6,13 @@ export const profileConfig: ProfileConfig = {
 	// 1. public 目录（以 "/" 开头，不优化）："/assets/images/avatar.webp"
 	// 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/avatar.webp"
 	// 3. 远程 URL："https://example.com/avatar.jpg"
-	avatar: "https://www.gravatar.com/avatar/a2be4bd33c15dc196d0d12b6e3fc26b9",
+	avatar: "https://weavatar.com/avatar/af4c9ee5b115f32ea3dc44d4820998a64a7cc0645b78babb6f61deaf8b0b980c",
 
 	// 名字
-	name: "Shirohako",
+	name: "枕心散人",
 
 	// 个人签名
-	bio: "Hello. I'm Shirohako.",
+	bio: "是笼囚天地，抑或是天地本在盏中？",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -21,12 +21,12 @@ export const profileConfig: ProfileConfig = {
 	// `pnpm add @iconify-json/<icon-set-name>`
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
-		{
-			name: "qq",
-			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/ZGsFa8qX2G",
-			showName: false,
-		},
+		// {
+		// 	name: "qq",
+		// 	icon: "fa7-brands:qq",
+		// 	url: "https://qm.qq.com/q/ZGsFa8qX2G",
+		// 	showName: false,
+		// },
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
