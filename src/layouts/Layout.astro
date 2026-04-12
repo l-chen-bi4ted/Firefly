@@ -898,6 +898,17 @@ function disableAnimation() {
         initIconLoader();
       });
 
+      // 刷新导航栏图标 - 解决 Swup 切换后图标不显示问题
+      setTimeout(() => {
+        document.querySelectorAll('.navbar-icon').forEach((icon) => {
+          const iconName = icon.getAttribute('name') || icon.getAttribute('icon');
+          if (iconName) {
+            // 强制重新设置 icon 属性以触发重新渲染
+            icon.setAttribute('icon', iconName);
+          }
+        });
+      }, 50);
+
       // 检查当前页面是否为文章页面（有TOC元素）
       const tocWrapper = document.getElementById("toc-wrapper");
       const isArticlePage = tocWrapper !== null;
