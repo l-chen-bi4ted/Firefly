@@ -1,11 +1,11 @@
 ---
 // SEO 优化版：服务端预计算推荐结果
-import { siteConfig } from "@/config/siteConfig";
-import { removeFileExtension } from "@utils/url-utils";
 import { getCollection } from "astro:content";
 import dayjs from "dayjs";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
+import { siteConfig } from "@/config/siteConfig";
+import { removeFileExtension } from "@utils/url-utils";
 
 // 扩展 dayjs 插件
 dayjs.extend(utc);
@@ -167,7 +167,7 @@ const getTagColor = () => {
   return "bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/20";
 };
 
-const getNumberStyle = (index: number, article: any) => {
+const getNumberStyle = (_index: number, article: { type: string }) => {
   if (article.type === "tag-match") {
     return "bg-[var(--primary)] shadow-lg shadow-[var(--primary)]/30";
   }
@@ -316,3 +316,4 @@ const getNumberStyle = (index: number, article: any) => {
     )}
   </div>
 </div>
+
