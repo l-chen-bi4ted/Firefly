@@ -59,7 +59,7 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           script: |
-            chown -R deploy:www-data /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index
+            chown -R 1000:1000 /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index
             find /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index -type d -exec chmod 775 {} \;
             find /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index -type f -exec chmod 664 {} \;
       
