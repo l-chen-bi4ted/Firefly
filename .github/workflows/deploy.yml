@@ -47,7 +47,7 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           source: "dist/*"
-          target: /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
+          target: /var/www/blog
           strip_components: 1
           overwrite: true
 
@@ -59,9 +59,9 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           script: |
-            chown -R deploy:www-data /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
-            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type d -exec chmod 775 {} \;
-            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type f -exec chmod 664 {} \;
+            chown -R deploy:www-data /var/www/blog
+            find /var/www/blog -type d -exec chmod 775 {} \;
+            find /var/www/blog -type f -exec chmod 664 {} \;
       
 #      - name: Deploy to pages branch
 #        uses: JamesIves/github-pages-deploy-action@v4
