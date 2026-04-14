@@ -47,7 +47,7 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           source: "dist/*"
-          target: /var/www/blog
+          target: /var/www/blog/index
           strip_components: 1
           overwrite: true
 
@@ -59,9 +59,9 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           script: |
-            chown -R deploy:www-data /var/www/blog
-            find /var/www/blog -type d -exec chmod 775 {} \;
-            find /var/www/blog -type f -exec chmod 664 {} \;
+            chown -R deploy:www-data /var/www/blog/index
+            find /var/www/blog/index -type d -exec chmod 775 {} \;
+            find /var/www/blog/index -type f -exec chmod 664 {} \;
       
 #      - name: Deploy to pages branch
 #        uses: JamesIves/github-pages-deploy-action@v4
