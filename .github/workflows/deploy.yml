@@ -38,10 +38,34 @@ jobs:
 
       - name: Create .nojekyll file
         run: touch dist/.nojekyll
-      
-      - name: Deploy to pages branch
-        uses: JamesIves/github-pages-deploy-action@v4
+
+      - name: Upload dist to ECS
+        uses: appleboy/scp-action@v1
         with:
-          branch: pages # 部署到pages分支
-          folder: dist # Astro默认构建输出目录
-          clean: true # 清理目标分支中的旧文件
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USER }}
+          key: ${{ secrets.ECS_SSH_KEY }}
+          port: ${{ secrets.ECS_PORT }}
+          source: "dist/*"
+          target: /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
+          strip_components: 1
+          overwrite: true
+
+      - name: Fix permissions
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USER }}
+          key: ${{ secrets.ECS_SSH_KEY }}
+          port: ${{ secrets.ECS_PORT }}
+          script: |
+            chown -R deploy:www-data /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
+            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type d -exec chmod 775 {} \;
+            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type f -exec chmod 664 {} \;
+      
+#      - name: Deploy to pages branch
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          branch: pages # 部署到pages分支
+#          folder: dist # Astro默认构建输出目录
+#          clean: true # 清理目标分支中的旧文件
