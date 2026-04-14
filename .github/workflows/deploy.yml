@@ -33,16 +33,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
       
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-        with:
-          version: latest
-      
-      - name: Format and lint code
-        run: |
-          biome format --write .
-          biome lint --write .
-      
       - name: Build site
         run: pnpm run build
 
