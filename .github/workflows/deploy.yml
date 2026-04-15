@@ -47,7 +47,7 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           source: "dist/*"
-          target: /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index
+          target: /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
           strip_components: 1
           overwrite: true
 
