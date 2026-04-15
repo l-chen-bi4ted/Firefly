@@ -14,34 +14,22 @@ draft: false
 
 ---
 
-## 2026-04-15 22:05
+## 2026-04-15 22:00
 
 **Immersive Lite**  
 🔗 https://github.com/Aioneas/immersive-lite
 
 iOS Safari 本地优先网页翻译 userscript，支持 OpenAI/DeepSeek API。采用批队列+LRU缓存策略，悬浮球交互设计，专注低打扰阅读体验。
 
----
-
-## 2026-04-15 22:10
-
 **Open Minis**  
 🔗 https://www.appinn.com/open-minis/
 
 iOS 端 AI Agent 应用，内置完整 iSH Linux 虚拟机，支持设备端能力调用（地图、照片、日程等）。可运行 Skills、操控浏览器，类似"手机上的 Claude Code"。
 
----
-
-## 2026-04-15 22:15
-
 **Scriptable Widget Builder**  
 🔗 https://github.com/OpenMinis/AwesomeMinis/blob/main/cases/developer/scriptable-widget-builder.md
 
 用 Minis AI 生成 Scriptable 小组件代码，挂载目录后直接写入，无需电脑。支持日历+提醒双栏小组件，自动适配尺寸与深色模式。
-
----
-
-## 2026-04-15 22:20
 
 **Karpathy 的 LLM 知识库方法论**  
 🔗 https://blog.riba2534.cn/blog/2026/karpathy的llm知识库-用大模型编译你的个人wiki/
