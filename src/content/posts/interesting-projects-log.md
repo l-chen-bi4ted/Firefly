@@ -2,7 +2,7 @@
 title: 有趣项目收集日志
 published: 2026-04-15
 description: 持续更新的 GitHub 项目与技术资料收集日志
-image: ./images/cover.jpg
+image: ./images/cover.avif
 tags:
   - GitHub
   - 开源项目
