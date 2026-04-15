@@ -23,7 +23,52 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
-		title: "夏夜流萤",
+		title: "LiKai Blog",
+		imgurl: "https://tylk.cc/wp-content/uploads/2021/06/tptylv2f.png",
+		desc: "云端电波起，星河寄心声",
+		siteurl: "https://tylk.cc",
+		tags: ["Blog"],
+		weight: 15,
+		enabled: true,
+	},
+	{
+		title: "Frederick's Blog",
+		imgurl: "http://www.ooowl.net/avatar.jpeg",
+		desc: "Sky is the limit.",
+		siteurl: "https://www.ooowl.net",
+		tags: ["Blog"],
+		weight: 14,
+		enabled: true,
+	},
+	{
+		title: "喵斯基部落",
+		imgurl: "https://blog.moewah.com/assets/images/avatar.webp",
+		desc: "运维之美，在于折腾与分享。",
+		siteurl: "https://blog.moewah.com/",
+		tags: ["Blog", "运维"],
+		weight: 13,
+		enabled: true,
+	},
+	{
+		title: "YoungYet",
+		imgurl: "https://pic.551211.xyz/file/AgACAgUAAyEGAASaAAFeoAADQWkTvs89771GSbmBCSijrIdN4IMPAAIVC2sbtLqgVMg6FL9sMf_uAQADAgADeQADNgQ.jpg",
+		desc: "Are you still young?",
+		siteurl: "https://blog.yt",
+		tags: ["Blog"],
+		weight: 12,
+		enabled: true,
+	},
+	{
+		title: "kidmaomao",
+		imgurl: "https://i2.hdslb.com/bfs/face/792743e71abe339c28b3dbab5ac1c38e3515efbc.jpg",
+		desc: "洛奇的一些笔记",
+		siteurl: "https://www.noginogi.sbs/",
+		tags: ["Blog"],
+		weight: 11,
+		enabled: true,
+	},
+	{
+		title: "夏夜流荧",
 		imgurl:
 			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
 		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
