@@ -59,9 +59,9 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           script: |
-            chown -R 1000:1000 /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index
-            find /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index -type d -exec chmod 775 {} \;
-            find /opt/1panel/apps/openresty/openresty/www/sites/blog.z42.site/index -type f -exec chmod 664 {} \;
+            chown -R 1000:1000 /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
+            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type d -exec chmod 775 {} \;
+            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type f -exec chmod 664 {} \;
       
 #      - name: Deploy to pages branch
 #        uses: JamesIves/github-pages-deploy-action@v4
