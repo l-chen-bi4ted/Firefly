@@ -3,12 +3,7 @@ title: 有趣项目收集日志
 published: 2026-04-15
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
-tags:
-  - GitHub
-  - 开源项目
-  - 工具
-  - iOS
-  - AI
+tags: [GitHub, 开源项目, 工具, iOS, AI]
 category: 项目收集
 draft: false
 ---
@@ -16,6 +11,25 @@ draft: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-16 16:15
+
+**OpenOmniBot**  
+🔗 https://github.com/omnimind-ai/OpenOmniBot
+
+端侧 AI 助手，可操作终端并完成 Android 系统的广泛任务。本地运行，无需云端依赖，支持多模态交互。
+
+**nopua**  
+🔗 https://github.com/wuji-labs/nopua
+
+用爱解放 AI 潜能的 Skill。对比恐惧驱动 vs 信任驱动，发现信任驱动的 AI 找到的隐藏 bug 数量翻倍 (+104%)，9/9 场景超越要求完成。
+
+**PPT Agent**  
+🔗 https://github.com/zengwenliang416/ppt-agent
+
+多智能体 PPT 生成工作流，4个智能体协作（research → content → slide → review），输出 Bento Grid SVG，支持 17 种风格预设和跨平台运行。
 
 ---
 
