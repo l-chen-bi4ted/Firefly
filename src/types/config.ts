@@ -138,6 +138,11 @@ export type SiteConfig = {
 		};
 	};
 
+	//RSS
+	rss?: {
+		fullText: boolean,
+	  },
+
 	// 图片优化配置
 	imageOptimization?: {
 		/**

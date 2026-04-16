@@ -45,10 +45,12 @@ export async function GET(context: APIContext) {
 			pubDate: post.data.published,
 			description: post.data.description || "",
 			link: url(`/posts/${post.id}/`),
-			content: sanitizeHtml(cleanedContent, {
+			...(siteConfig.rss?.fullText && {
+			  content: sanitizeHtml(cleanedContent, {
 				allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+			  }),
 			}),
-		});
+		  });
 	}
 	return rss({
 		title: siteConfig.title,

@@ -213,7 +213,10 @@ export const siteConfig: SiteConfig = {
 			screenRecord: true,
 		},
 	},
-
+	// RSS 配置
+	rss: {
+		fullText: false, // true=全文，false=摘要
+ 	 },
 	// 图像优化及响应式配置
 	// 图像优化压缩只保留avif或webp
 	// 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
