@@ -14,6 +14,15 @@ draft: false
 
 ---
 
+## 2026-04-17 07:05
+
+**Blinko**  
+🔗 https://github.com/blinkospace/blinko
+
+开源、自托管的个人 AI 笔记工具，基于 TypeScript + Tauri 构建。AI 驱动的 RAG 检索，支持自然语言搜索笔记。数据完全私有，支持 macOS/Windows/Android/Linux。
+
+---
+
 ## 2026-04-16 16:15
 
 **OpenOmniBot**  
