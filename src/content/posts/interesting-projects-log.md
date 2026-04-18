@@ -1,16 +1,42 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
+updated: 2026-04-18
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
 category: 项目收集
 draft: false
+pinned: false
 ---
 
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-18 11:10
+
+**Financial Calc**  
+🔗 https://github.com/louisgreen0726/financial-calc
+
+基于 Next.js 16、React 19 和 TypeScript 的双语金融计算器。包含 9 大模块：TVM、现金流、股票估值、债券、投资组合、期权、风险、贷款、宏观指标。支持中英文界面、CSV/JSON/PDF 导出。
+
+**MenuStatus**  
+🔗 https://github.com/Snowyyyyyy1/MenuStatus
+
+macOS 菜单栏应用，监控 Atlassian Statuspage 和 incident.io 状态页，内置 OpenAI/Anthropic 提供商。附带 AI Stupid Level 视图，查看 AI 模型基准排名和趋势。
+
+**neko**  
+🔗 https://github.com/m1k1o/neko
+
+自托管虚拟浏览器，基于 Docker 和 WebRTC。支持多人同时访问，可用于观影派对、协作浏览、远程教学。流畅视频传输，内置音频，多人控制。
+
+**koharu**  
+🔗 https://koharu.rs/zh-CN/
+
+Rust 编写的漫画翻译桌面应用，提供 OCR、清理、翻译、校对、导出完整流程。支持本地 llama.cpp 模型（CUDA/Vulkan/Metal 加速），Headless 模式，MCP 集成。
 
 ---
 
