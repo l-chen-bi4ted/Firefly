@@ -909,6 +909,16 @@ function disableAnimation() {
         });
       }, 50);
 
+      // 刷新页面内其他图标（友链、留言板等）- 解决 Swup 切换后图标不显示问题
+      setTimeout(() => {
+        document.querySelectorAll('iconify-icon[name^="material-symbols"]').forEach((icon) => {
+          const iconName = icon.getAttribute('name');
+          if (iconName) {
+            icon.setAttribute('icon', iconName);
+          }
+        });
+      }, 60);
+
       // 检查当前页面是否为文章页面（有TOC元素）
       const tocWrapper = document.getElementById("toc-wrapper");
       const isArticlePage = tocWrapper !== null;
