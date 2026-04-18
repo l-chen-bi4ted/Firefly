@@ -23,6 +23,15 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
+		title: "Limour's Blog",
+		imgurl: "https://img.limour.top/2023/08/29/64ee0818afef0.webp",
+		desc: "互联网の自留地",
+		siteurl: "https://hexo.limour.top",
+		tags: ["Blog"],
+		weight: 16,
+		enabled: true,
+	},
+	{
 		title: "LiKai Blog",
 		imgurl: "https://tylk.cc/wp-content/uploads/2021/06/tptylv2f.png",
 		desc: "云端电波起，星河寄心声",
