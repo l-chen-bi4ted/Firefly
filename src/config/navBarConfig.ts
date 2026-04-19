@@ -64,12 +64,12 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 		// 子菜单
 		children: [
-			{
-				name: "GitHub",
-				url: "https://github.com/l-chen-bi4ted",
-				external: true,
-				icon: "fa7-brands:github",
-			},
+			// {
+			// 	name: "GitHub",
+			// 	url: "https://github.com/l-chen-bi4ted",
+			// 	external: true,
+			// 	icon: "fa7-brands:github",
+			// },
 			{
 				name: "Solian",
 				url: "https://solian.app/accounts/echo42",
