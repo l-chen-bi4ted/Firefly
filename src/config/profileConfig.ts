@@ -27,16 +27,16 @@ export const profileConfig: ProfileConfig = {
 		// 	url: "https://qm.qq.com/q/ZGsFa8qX2G",
 		// 	showName: false,
 		// },
-		{
-			name: "GitHub",
-			icon: "fa7-brands:github",
-			url: "https://github.com/l-chen-bi4ted",
-			showName: false,
-		},
+		// {
+		//	name: "GitHub",
+		//	icon: "fa7-brands:github",
+		//	url: "https://github.com/l-chen-bi4ted",
+		//	showName: false,
+		// },
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:shirohako@icloud.com",
+			url: "mailto:keen_awl_3f@icloud.com",
 			showName: false,
 		},
 		{

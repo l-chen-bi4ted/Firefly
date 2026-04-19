@@ -12,8 +12,8 @@
 
 ## 📫 联系方式
 
-- 💻 GitHub: [l-chen-bi4ted](https://github.com/l-chen-bi4ted)
-- ✉️ Email: [shirohako@icloud.com](mailto:shirohako@icloud.com)
+## - 💻 GitHub: [l-chen-bi4ted](https://github.com/l-chen-bi4ted)
+- ✉️ Email: [keen_awl_3f@icloud.com](mailto:keen_awl_3f@icloud.com)
 - 🌿 Solian: [echo42](https://solian.app/accounts/echo42)
 
 ---
