@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-18
+updated: 2026-04-19
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,26 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-19 20:10
+
+
+**SearXNG**  
+🔗 https://docs.searxng.org
+
+隐私友好的元搜索引擎，聚合 70+ 搜索引擎结果。不追踪用户、无广告、自托管。支持图片、视频、新闻、学术论文等多种搜索类型。
+
+**AIUsage**  
+🔗 https://github.com/sylearn/AIUsage
+
+macOS AI 订阅管理仪表板，支持 10+ 提供商（Codex、Copilot、Cursor、Claude Code 等）。Claude Code 代理功能可让 Claude 使用 DeepSeek、GPT、Ollama 等模型。
+
+**QwenPaw**  
+🔗 https://qwenpaw.agentscope.io/docs/intro/
+
+个人 AI 助理平台，支持多通道对话（钉钉、飞书、Discord 等）、多智能体协作。Skills 扩展能力，支持本地模型完全离线运行。AgentScope 团队出品。
 
 ---
 
@@ -37,21 +57,6 @@ macOS 菜单栏应用，监控 Atlassian Statuspage 和 incident.io 状态页，
 🔗 https://koharu.rs/zh-CN/
 
 Rust 编写的漫画翻译桌面应用，提供 OCR、清理、翻译、校对、导出完整流程。支持本地 llama.cpp 模型（CUDA/Vulkan/Metal 加速），Headless 模式，MCP 集成。
-
-**SearXNG**  
-🔗 https://docs.searxng.org
-
-隐私友好的元搜索引擎，聚合 70+ 搜索引擎结果。不追踪用户、无广告、自托管。支持图片、视频、新闻、学术论文等多种搜索类型。
-
-**AIUsage**  
-🔗 https://github.com/sylearn/AIUsage
-
-macOS AI 订阅管理仪表板，支持 10+ 提供商（Codex、Copilot、Cursor、Claude Code 等）。Claude Code 代理功能可让 Claude 使用 DeepSeek、GPT、Ollama 等模型。
-
-**QwenPaw**  
-🔗 https://qwenpaw.agentscope.io/docs/intro/
-
-个人 AI 助理平台，支持多通道对话（钉钉、飞书、Discord 等）、多智能体协作。Skills 扩展能力，支持本地模型完全离线运行。AgentScope 团队出品。
 
 ---
 
