@@ -5,21 +5,18 @@ updated: 2026-04-19
 description: 借用Minis来帮忙在阿里云云服务器上部署基于 Astro 框架和 Firefly 主题的博客。
 image: ./images/cover2.avif
 tags: [GitHub, Aliyun, 1Panel, Astro, Firefly, Minis, AI]
-category: 项目收集
+category: 生活琐事
 draft: false
 pinned: false
 ---
 
 # 关于我大概是无聊了在那儿部署博客这件事
 
-> 借用Minis来帮忙在阿里云云服务器上部署基于 Astro 框架和 Firefly 主题的博客。
-
+> 借用Minis来帮忙在阿里云服务器上部署基于 Astro 框架和 Firefly 主题的博客。
 ---
-
-
 大概上上周，我决定在云服务器上部署我的博客。
 
-这个博客使用 Astro 框架和 Firefly 主题。我选择了阿里云 ECS 作为服务器，操作系统是 Ubuntu 22.04 ，阿里云价格还不错，2C2G 的小破机加上一年域名花了111元。
+这个博客使用 Astro 框架和 Firefly 主题。我选择了阿里云 ECS 作为服务器，操作系统是 Ubuntu 22.04 ，阿里云价格还不错，2C2G 的小破机加上一年域名花了111元。~~~~
 
 这几篇关于 Astro 部署的教程也在我自己操作实施的过程中提供了很多帮助。
 [通过 1Panel 部署 Astro 站点到服务器——公开仓库篇](https://www.ooowl.net/posts/depoly-an-public-repo-astro-site-to-server-by-1panel/)
