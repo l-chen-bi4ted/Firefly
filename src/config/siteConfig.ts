@@ -7,7 +7,7 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "观心回响",
+	title: "z42.Site",
 
 	// 站点副标题
 	subtitle: "观心回响",
