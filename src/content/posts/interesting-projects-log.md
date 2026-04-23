@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-19
+updated: 2026-04-24
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -16,8 +16,30 @@ pinned: false
 
 ---
 
-## 2026-04-19 20:10
+## 2026-04-24 01:00
 
+**Kami**  
+🔗 https://github.com/tw93/kami
+
+AI 原生文档设计系统，面向 AI 生成内容的排版场景。支持一页纸报告、简历、作品集、白皮书、长文档、Slides。中英文双语排版，内置图表绘制能力。可作为 Claude Code / ChatGPT / Cursor 的文档输出 Skill。风格简洁克制，避免 AI Design 味道。
+
+**Mole**  
+🔗 https://github.com/tw93/mole
+
+macOS 深度清理工具，命令行优先。深度清理缓存、日志、浏览器残留、App 遗留数据。支持卸载 App 并清理 LaunchAgents、偏好设置等隐藏残留。覆盖 Xcode、模拟器、Claude Code、Cursor 等开发缓存。常用命令：mo clean / mo analyze / mo uninstall / mo status。
+
+---
+
+## 2026-04-22 12:53
+
+**Math Curve Loaders**  
+🔗 https://github.com/Paidax01/math-curve-loaders
+
+基于数学曲线生成的加载动画集，非手写关键帧。玫瑰曲线、利萨如曲线、次摆线、心形线等多种曲线类型，附带公式注释和可复制代码。纯前端轻量实现。
+
+---
+
+## 2026-04-19 20:10
 
 **SearXNG**  
 🔗 https://docs.searxng.org
