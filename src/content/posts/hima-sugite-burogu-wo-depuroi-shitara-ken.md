@@ -1,7 +1,7 @@
 ---
 title: 关于我大概是无聊了在那儿部署博客这件事
 published: 2026-04-18
-updated: 2026-04-19
+updated: 2026-04-24
 description: 借用Minis来帮忙在阿里云云服务器上部署基于 Astro 框架和 Firefly 主题的博客。
 image: ./images/cover2.avif
 tags: [GitHub, Aliyun, 1Panel, Astro, Firefly, Minis, AI]
@@ -24,6 +24,7 @@ pinned: false
 [从零搭建Astro博客：1小时完成部署指南]( https://blog.moewah.com/posts/zero-to-astro-blog-deployment-guide/)
 [从 0 开始：在阿里云 ECS 上部署 Astro 博客，并用 GitHub Actions 自动发布]( https://zhangbh.com/posts/build-astro-blog/)
 [Firefly Astro 博客 主题模板文档]( https://docs-firefly.cuteleaf.cn/zh/)
+[Astro博客搭建全攻略：性能+SEO双拉满](https://www.oneyangcrown.top/posts/astro-blog-complete-guide/)
 
 ## 二、准备工作
 在开始之前，先是完成了一些准备工作。阿里云控制台中配置了 SSH 密钥对，安全组中开放了22、80、443几个常用端口。ICP 备案大概是花了6天。
@@ -74,4 +75,89 @@ ping www.yourdomain.com
 ---
 先写这点，这种天突然感冒了，大家注意保重身体。  2026-04-19 22:05
 
+---
 
+五、上传博客内容
+上传博客内容
+现在，服务器和网站框架都已就绪，只差把我的博客内容放上去了。虽然最终目标是全自动部署，但首次部署，我还是想先跑通手动流程。当然，这个“手动”也可以用更省力的方式完成。
+
+1. 连接本地设备
+我再次打开Minis应用。就像之前连接云服务器一样，我为我的本地开发设备也配置了SSH连接。这台设备上存有我的博客源代码。
+
+给 Minis 的指令
+```
+通过SSH连接到我的本地设备（192.168.1.100），进入博客的项目目录Blog，然后克隆最新的代码 `git clone git@github.com:xxxx/Firefly.git`。
+```
+
+2. 构建与上传
+ Github 托管的代码克隆到本地后继续用自然语言向 Minis 下达指令：
+
+	1.	安装依赖： “运行 `pnpm install`。”
+	2.	构建项目： “运行 `pnpm build`。”
+	3.	上传文件： “用 `scp` 或 `rsync` 命令，把 `dist/` 目录下的所有文件，复制到云服务器 `yourdomain.com` 网站的根目录 `/opt/1panel/apps/openresty/openresty/www/sites/yourdomain.com/index` 下。”
+
+这些指令被准确执行。它在我的本地设备上完成了构建，然后将生成的文件直接推送到了云服务器的指定位置。
+
+这个过程省去了我在本地手动打包、再通过1Panel网页手动上传的繁琐步骤。
+
+3. 验证结果
+文件传输完成后，我立刻在浏览器里重新访问了我的域名 `https://yourdomain.com`。
+
+这一次，屏幕上不再是1Panel的测试页，而是我熟悉的Astro Firefly博客主页。文章、样式和图片都显示正常。这标志着我的博客首次“半自动”部署成功了。
+
+六、实现自动化部署 (GitHub Actions)
+手动上传虽然成功了，但每次更新文章都要重复一遍这个过程，这不符合我“懒人”的原则。所以，我的下一个目标是配置GitHub Actions，实现自动化部署。
+
+1. 工作原理
+整个自动化流程的原理很简单。
+
+	1.	我在本地写好新文章，然后使用Git将改动推送到我的GitHub仓库。
+	2.	GitHub检测到代码推送后，会自动触发一个预设好的工作流（Action）。
+	3.	这个工作流会在GitHub的服务器上模拟一个环境，自动拉取我的最新代码，安装依赖，并运行 `pnpm build` 命令打包成静态文件。
+	4.	打包完成后，工作流会使用SSH安全地连接到我的阿里云服务器。
+	5.	最后，它通过 `rsync` 命令，高效地将打包好的文件同步到我网站的根目录，自动覆盖旧文件。
+
+整个过程无需我手动干预，我只管写文章和推送代码。
+
+2. 服务器端准备
+为了让GitHub能安全地访问我的服务器，我需要为它配置一把“钥匙”。
+
+我通过Minis连接到我的ECS服务器，执行了以下命令来生成一对新的SSH密钥。
+￼
+命令执行后，在 `/root/.ssh/` 目录下生成了 `id_rsa` (私钥) 和 `id_rsa.pub` (公钥) 两个文件。接着，把公钥的内容添加到了认证文件里。
+
+这样，任何持有对应私钥的设备都可以免密登录服务器了。
+
+3. GitHub仓库配置
+接下来，我需要把服务器的地址和私钥告诉GitHub。这些信息是敏感数据，必须存放在GitHub仓库的Secrets中。
+
+我打开我的博客项目仓库，进入 `Settings` > `Secrets and variables` > `Actions` 页面，点击“New repository secret”添加了以下几个秘密变量：
+
+	•	`SERVER_HOST`: 我的ECS服务器公网IP地址。
+	•	`SERVER_USER`: 登录服务器的用户名，我这里是 `root`。
+	•	`SSH_PRIVATE_KEY`: 我查看并复制了服务器上 `/root/.ssh/id_rsa` 私钥文件的全部内容，粘贴到这里。
+	•	`REMOTE_TARGET_PATH`: 我在服务器上存放网站文件的绝对路径，即 `/opt/1panel/apps/openresty/openresty/www/sites/yourdomain.com/index`。
+
+4. 编写Workflow文件
+万事俱备，只差编排具体的自动化脚本了。
+
+我在本地项目的根目录下创建了 `.github/workflows/` 文件夹，并在其中新建了一个 `deploy.yml` 文件。我将以下配置写入了这个文件：
+
+```
+￼晚些补
+
+```
+
+这个脚本文件定义了从拉取代码、安装、构建到最终部署的每一个步骤。
+
+5. 测试自动化
+为了验证成果，我在本地对博客做了一个小小的修改，然后将改动 `git push` 到了 `main` 分支。
+
+我立刻打开GitHub仓库的“Actions”页面，看到一个新的工作流正在运行。几分钟后，它显示为绿色，表示所有步骤都成功完成了。
+
+我刷新了我的博客网站，那个小小的修改已经出现在页面上。自动化部署成功了。
+
+七、最后的总结
+从一时兴起购买服务器，到借助AI助手和1Panel面板完成部署，再到最后配置好GitHub Actions实现自动化，整个过程比我想象的要顺利。
+
+现代化的工具确实极大地降低了技术门槛。现在，我可以更专注于写作本身，而不必为每次发布都进行繁琐的操作。
