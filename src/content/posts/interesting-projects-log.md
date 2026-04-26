@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-24
+updated: 2026-04-27
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,20 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-27 08:00
+
+**HomeDir**  
+🔗 https://github.com/52Lxcloud/HomeDir
+
+轻量快速的个人服务导航页，专为管理内外网服务地址设计。支持分类管理、Cmd+K 全局搜索、自动切换内外网地址。SQLite 单文件存储，Docker 一键部署。适合家庭实验室、NAS、自托管服务统一入口。
+
+**UZI-Skill**  
+🔗 https://github.com/wbh604/UZI-Skill
+
+项目仅作学习研究使用。不代表任何真实投资者的实际观点，不构成投资建议，投资有风险，决策需谨慎。
 
 ---
 
