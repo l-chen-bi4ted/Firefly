@@ -47,21 +47,24 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
           source: "dist/*"
-          target: /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
+          target: ${{ secrets.REMOTE_TARGET_PATH }}
           strip_components: 1
           overwrite: true
 
       - name: Fix permissions
         uses: appleboy/ssh-action@v1
+        env:
+          TARGET: ${{ secrets.REMOTE_TARGET_PATH }}
         with:
           host: ${{ secrets.ECS_HOST }}
           username: ${{ secrets.ECS_USER }}
           key: ${{ secrets.ECS_SSH_KEY }}
           port: ${{ secrets.ECS_PORT }}
+          envs: TARGET
           script: |
-            chown -R 1000:1000 /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index
-            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type d -exec chmod 775 {} \;
-            find /opt/1panel/apps/openresty/openresty/www/sites/z42.site/index -type f -exec chmod 664 {} \;
+            chown -R 1000:1000 $TARGET
+            find $TARGET -type d -exec chmod 775 {} \;
+            find $TARGET -type f -exec chmod 664 {} \;
       
 #      - name: Deploy to pages branch
 #        uses: JamesIves/github-pages-deploy-action@v4
