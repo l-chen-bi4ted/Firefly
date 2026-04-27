@@ -225,7 +225,8 @@ jobs:
 
 ---
 
-后日谈：关于分支的一点思考
+## 后日谈：关于分支的一点思考
+
 写完这篇小作文后，我才意识到一个之前忽略了的部分，也是看了下面这篇后了解到的。
 [Astro博客搭建全攻略：性能+SEO双拉满](https://www.oneyangcrown.top/posts/astro-blog-complete-guide/)
 
