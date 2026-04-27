@@ -23,6 +23,9 @@ pinned: false
 
 轻量快速的个人服务导航页，专为管理内外网服务地址设计。支持分类管理、Cmd+K 全局搜索、自动切换内外网地址。SQLite 单文件存储，Docker 一键部署。适合家庭实验室、NAS、自托管服务统一入口。
 
+**TradingAgents**  
+🔗 https://github.com/TauricResearch/TradingAgents
+
 **UZI-Skill**  
 🔗 https://github.com/wbh604/UZI-Skill
 
