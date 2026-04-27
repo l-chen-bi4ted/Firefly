@@ -1,7 +1,7 @@
 ---
 title: 关于我大概是无聊了在那儿部署博客这件事
 published: 2026-04-18
-updated: 2026-04-24
+updated: 2026-04-27
 description: 借用Minis来帮忙在阿里云云服务器上部署基于 Astro 框架和 Firefly 主题的博客。
 image: ./images/cover2.avif
 tags: [GitHub, Aliyun, 1Panel, Astro, Firefly, Minis, AI]
@@ -75,10 +75,8 @@ ping www.yourdomain.com
 ---
 先写这点，这种天突然感冒了，大家注意保重身体。  2026-04-19 22:05
 
----
+## 五、上传博客内容
 
-五、上传博客内容
-上传博客内容
 现在，服务器和网站框架都已就绪，只差把我的博客内容放上去了。虽然最终目标是全自动部署，但首次部署，我还是想先跑通手动流程。当然，这个“手动”也可以用更省力的方式完成。
 
 1. 连接本地设备
@@ -105,7 +103,7 @@ ping www.yourdomain.com
 
 这一次，屏幕上不再是1Panel的测试页，而是我熟悉的Astro Firefly博客主页。文章、样式和图片都显示正常。这标志着我的博客首次“半自动”部署成功了。
 
-六、实现自动化部署 (GitHub Actions)
+## 六、实现自动化部署 (GitHub Actions)
 手动上传虽然成功了，但每次更新文章都要重复一遍这个过程，这不符合我“懒人”的原则。所以，我的下一个目标是配置GitHub Actions，实现自动化部署。
 
 1. 工作原理
@@ -133,9 +131,10 @@ ping www.yourdomain.com
 
 我打开我的博客项目仓库，进入 `Settings` > `Secrets and variables` > `Actions` 页面，点击“New repository secret”添加了以下几个秘密变量：
 
-	•	`SERVER_HOST`: 我的ECS服务器公网IP地址。
-	•	`SERVER_USER`: 登录服务器的用户名，我这里是 `root`。
-	•	`SSH_PRIVATE_KEY`: 我查看并复制了服务器上 `/root/.ssh/id_rsa` 私钥文件的全部内容，粘贴到这里。
+	•	`ECS_HOST`: ECS服务器公网IP地址。
+	•	`ECS_USER`: 登录服务器的用户名，我这里是 `root`。
+	•	`ECS_SSH_KEY`: 查看并复制了服务器上 `/root/.ssh/id_rsa` 私钥文件的全部内容，粘贴到这里。
+	•	`ECS_PORT`: SSH 的端口号，一般默认是22。
 	•	`REMOTE_TARGET_PATH`: 我在服务器上存放网站文件的绝对路径，即 `/opt/1panel/apps/openresty/openresty/www/sites/yourdomain.com/index`。
 
 4. 编写Workflow文件
@@ -144,8 +143,70 @@ ping www.yourdomain.com
 我在本地项目的根目录下创建了 `.github/workflows/` 文件夹，并在其中新建了一个 `deploy.yml` 文件。我将以下配置写入了这个文件：
 
 ```
-￼晚些补
+name: Deploy to ECS
 
+on:
+  # 每次推送到 `master` 分支时触发这个"工作流程"
+  # 如果你使用了别的分支名，请按需将 `master` 替换成你的分支名
+  push:
+    branches: [ master ]
+  # 允许你在 GitHub 上的 Actions 标签中手动触发此"工作流程"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.14.4
+          run_install: false
+          
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      
+      - name: Build site
+        run: pnpm run build
+
+      - name: Create .nojekyll file
+        run: touch dist/.nojekyll
+
+      - name: Upload dist to ECS
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USER }}
+          key: ${{ secrets.ECS_SSH_KEY }}
+          port: ${{ secrets.ECS_PORT }}
+          source: "dist/*"
+          target: ${{ secrets.REMOTE_TARGET_PATH }}
+          strip_components: 1
+          overwrite: true
+
+      - name: Fix permissions
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USER }}
+          key: ${{ secrets.ECS_SSH_KEY }}
+          port: ${{ secrets.ECS_PORT }}
+          script: |
+            chown -R 1000:1000 ${{ secrets.REMOTE_TARGET_PATH }}
+            find ${{ secrets.REMOTE_TARGET_PATH }} -type d -exec chmod 775 {} \;
+            find ${{ secrets.REMOTE_TARGET_PATH }} -type f -exec chmod 664 {} \;
+    
 ```
 
 这个脚本文件定义了从拉取代码、安装、构建到最终部署的每一个步骤。
@@ -157,7 +218,7 @@ ping www.yourdomain.com
 
 我刷新了我的博客网站，那个小小的修改已经出现在页面上。自动化部署成功了。
 
-七、最后的总结
+## 七、最后的总结
 从一时兴起购买服务器，到借助AI助手和1Panel面板完成部署，再到最后配置好GitHub Actions实现自动化，整个过程比我想象的要顺利。
 
-现代化的工具确实极大地降低了技术门槛。现在，我可以更专注于写作本身，而不必为每次发布都进行繁琐的操作。
+现代化的工具确实极大地降低了技术门槛。现在，我可以继续躺平摆烂了。
