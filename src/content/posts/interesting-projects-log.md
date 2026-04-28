@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-27
+updated: 2026-04-28
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,20 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-28 22:20
+
+**Hermes Agent**  
+🔗 https://github.com/NousResearch/hermes-agent
+
+Nous Research 打造的自改进 AI Agent，内置学习循环：从经验中创建技能、跨会话记忆。支持 Telegram/Discord/Slack/WhatsApp/CLI 等多平台，任意 LLM 模型切换。中文社区：https://hermesagent.org.cn
+
+**Hermes Web UI**  
+🔗 https://github.com/EKKOLearnAI/hermes-web-ui
+
+Hermes Agent 的第三方全功能 Web 仪表板。AI 对话、8 平台频道配置、用量分析、模型管理、定时任务、Web 终端。npm install -g hermes-web-ui 一键启动。
 
 ---
 
