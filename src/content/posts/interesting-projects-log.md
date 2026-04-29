@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-28
+updated: 2026-04-29
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,17 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-29 16:48
+
+**Mem0**  
+🔗 https://github.com/mem0ai/mem0
+
+跨 LLM 框架的通用记忆层，向量存储 + 知识图谱双层架构。记忆基准 LoCoMo 91.6、LongMemEval 93.4。开箱即用，免费套餐够用。支持与 Hermes Agent 集成。
+
+📖 配置教程：https://zhuanlan.zhihu.com/p/2031865910697408162
 
 ---
 
