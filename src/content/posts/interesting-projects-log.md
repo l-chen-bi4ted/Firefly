@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-29
+updated: 2026-04-30
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,15 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-04-30 10:41
+
+**CodexBar**  
+🔗 https://github.com/steipete/CodexBar
+
+macOS 14+ 菜单栏应用，聚合显示 Codex、Claude、Cursor、Gemini 等 18+ AI 服务商的会话额度、周额度与重置倒计时。支持本地读取日志/Cookie 追踪近 30 天成本，自带 CLI 和 Widget。MIT 许可。
 
 ---
 
