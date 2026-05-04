@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-04-30
+updated: 2026-05-04
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,15 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-04 16:58
+
+**WhatCable**  
+🔗 https://github.com/darrylmorley/whatcable
+
+macOS 14+ 菜单栏应用，基于 IOKit 读取 USB-C 端口 PD 与 e-marker 信息，直接展示线材速率、功率上限和厂商。内置充电诊断，可关联线材额定功率、充电器 PDO 列表与 Mac 协商结果定位慢充瓶颈。同时提供菜单栏界面和 `whatcable` CLI，支持 JSON、watch 与原始 IOKit 输出。
 
 ---
 
