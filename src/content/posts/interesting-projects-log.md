@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-04
+updated: 2026-05-08
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,39 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-08 19:14
+
+**NetWatch**  
+🔗 https://github.com/matthart1983/netwatch
+
+终端实时网络诊断与抓包一体化工具。零配置启动，同时查看网卡状态、连接详情、带宽变化与 DNS/网关健康探测。内置类 Wireshark 实时抓包与协议解析，支持 PCAP 导出。Flight Recorder 可持续保留滚动故障现场，一键冻结并导出事件包。Rust，MIT。
+
+**codex-web**  
+🔗 https://github.com/0xcaff/codex-web
+
+把 Codex Desktop 带到浏览器的自托管前端。浏览器直接连接运行在自有机器上的 Codex，任务可在云主机、家用服务器或桌面设备上持续执行。轻量封装便于跟进上游更新，已支持 subagents、内联图片、编辑器侧边栏和语音转写。npx 或 Nix 快速启动。
+
+**nono**  
+🔗 https://github.com/always-further/nono
+
+面向开发者与 AI Agent 的能力型安全沙箱。基于 Linux Landlock 和 macOS Seatbelt 提供内核级沙箱，权限收敛后可继承到子进程。支持 Agent multiplexing、快照回滚、审计日志与策略配置。内置凭证注入、网络过滤与 Sigstore 证明链。Rust，Apache-2.0。
+
+---
+
+## 2026-05-05 22:51
+
+**talk-normal**  
+🔗 https://github.com/hexiecs/talk-normal
+
+一段通用 system prompt，让 GPT、Claude、Gemini、LLaMA 等模型输出更短、更直接、更像真人表达。内置可迭代表达规则，覆盖客套话清理、结论前置、条件式菜单收敛。GPT-4o-mini 平均缩减 73%，GPT-5.4 平均缩减 72%。支持 OpenClaw、Hermes、ChatGPT 自定义指令、API 接入。
+
+**RAMCacheManager**  
+🔗 https://github.com/talkcozy/RAMCacheManager
+
+原生 macOS 应用，将 npm、Cargo、CocoaPods、Go、pnpm 等开发缓存迁移到 RAM 磁盘。1-16 GB 可调，一键符号链接，登录自动挂载，重启自动清理。菜单栏实时监控，缓存 I/O 比 SSD 快 10-100 倍。SwiftUI，Apple Silicon only。
 
 ---
 
