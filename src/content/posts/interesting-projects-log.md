@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-08
+updated: 2026-05-10
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,24 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-10 09:42
+
+**SwiftMTP**  
+🔗 https://github.com/Neighbor-Z/SwiftMTP
+
+macOS 上现代化的 MTP 设备管理工具。基于 Swift 与原生 macOS 界面，支持浏览 Android 等 MTP 设备目录，交互体验接近 Finder。提供双向文件传输、拖拽导入导出、Quick Look 预览，以及新建文件夹、重命名、删除等常用操作。支持多设备连接、传输进度跟踪与任务取消，后端结合 Kalam 与 libusb，兼顾性能与轻量化。无需 ADB 或 USB 调试。
+
+---
+
+## 2026-05-09 15:07
+
+**visual-explainer**  
+🔗 https://github.com/nicobailon/visual-explainer
+
+面向 AI Agent 的可视化解释与 HTML 报告生成工具。将架构图、Diff 审查、计划审计、数据表格和项目回顾自动生成自包含 HTML 页面。内置 Mermaid、CSS Grid、Chart.js 渲染方案，支持缩放、平移、主题化展示。提供 /diff-review、/plan-review、/generate-slides 等命令，支持 Claude Code、Pi、Codex CLI、OpenCode、Cursor、OpenClaw 多平台。
 
 ---
 
