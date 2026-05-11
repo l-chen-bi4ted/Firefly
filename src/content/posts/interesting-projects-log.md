@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-10
+updated: 2026-05-11
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,24 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-11 11:48
+
+**OmniGet**  
+🔗 https://github.com/tonhowtf/omniget
+
+开源桌面应用，从互联网下载视频、课程、书籍和音乐，然后在应用内播放。支持 YouTube、B站、抖音等约一千个网站的视频下载，Udemy/Kiwify 等在线课程的下载与播放（含时间戳笔记），PDF/EPUB/CBZ 电子书阅读器，以及本地音乐库 + Spotify/SoundCloud/YouTube Music 接入。内置番茄钟、笔记应用、进度仪表盘、FFmpeg 转换器。Tauri 构建，GPL-3.0。
+
+---
+
+## 2026-05-10 20:40
+
+**AI-Coding-Guide-Zh**  
+🔗 https://github.com/KimYx0207/AI-Coding-Guide-Zh
+
+Claude Code + OpenClaw + Codex 中文教程合集。36篇完整教程，约18万字，90+可运行代码示例，230+ FAQ。涵盖三线学习路径：Claude Code 编程线（13篇）、OpenClaw 助手线（12篇）、Codex Agent 线（14篇）。从小白到企业实战，持续适配最新版本。
 
 ---
 
