@@ -129,6 +129,11 @@ macOS 14+ 菜单栏应用，聚合显示 Codex、Claude、Cursor、Gemini 等 18
 
 Nous Research 打造的自改进 AI Agent，内置学习循环：从经验中创建技能、跨会话记忆。支持 Telegram/Discord/Slack/WhatsApp/CLI 等多平台，任意 LLM 模型切换。中文社区：https://hermesagent.org.cn
 
+**hermes-patches**  
+🔗 https://github.com/Cyrene963/hermes-patches
+
+Hermes Agent 社区补丁合集，49 个补丁一键安装。核心效果：每次对话省 99.2% token（~12000 → ~200），多用户 session/memory 隔离，每 8 次工具调用自动合规检查，18 个安全补丁（SSRF、文件安全、Secret redaction），记忆元认知框架。已合并补丁自动跳过，幂等安全。
+
 **Hermes Web UI**  
 🔗 https://github.com/EKKOLearnAI/hermes-web-ui
 
