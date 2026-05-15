@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-11
+updated: 2026-05-15
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,24 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-15 06:40
+
+**OpenMAIC**  
+🔗 https://github.com/THU-MAIC/OpenMAIC
+
+清华大学开源的多 Agent 互动课堂平台。一键将任意主题或文档生成沉浸式学习体验：AI 教师和同学实时授课、讨论、互动。支持幻灯片、测验、交互式 HTML 模拟、项目制学习（PBL）。深度交互模式包含 3D 可视化、模拟、游戏、思维导图、在线编程。白板 + TTS 语音讲解，可导出 .pptx 或交互式 .html。OpenClaw 集成支持从飞书/Slack/Telegram 直接生成课堂。Next.js 构建。
+
+---
+
+## 2026-05-13 10:03
+
+**Project AIRI**  
+🔗 https://github.com/moeru-ai/airi
+
+受 Neuro-sama 启发的自托管 AI 虚拟角色（waifu）伴侣。支持实时语音聊天（VAD + STT + LLM + TTS）、玩游戏（Minecraft、Factorio）、VRM/Live2D 模型控制。纯浏览器内本地推理（WebGPU），桌面版原生 CUDA/Metal。支持 Telegram/Discord 通讯、DuckDB WASM 记忆系统。多平台：Web、macOS、Windows、Linux、移动端。Vue.js + TypeScript 构建。
 
 ---
 
