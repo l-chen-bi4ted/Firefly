@@ -68,6 +68,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 	},
 	{
+		title: "sysin",
+		imgurl: "https://sysin.org/img/logo.png",
+		desc: "山河自古英雄据，落叶声中，鸿雁尽飞去。",
+		siteurl: "https://sysin.org/",
+		tags: ["Blog"],
+		weight: 11,
+		enabled: true,
+	},
+	{
 		title: "夏夜流荧",
 		imgurl:
 			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
