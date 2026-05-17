@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-15
+updated: 2026-05-16
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,15 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-16 20:03
+
+**Anima**  
+🔗 https://huggingface.co/circlestone-labs/Anima
+
+20 亿参数动漫风文生图模型。CircleStone Labs 与 Comfy Org 合作打造，专注动漫概念、角色与风格，也能生成多种非写实艺术图像。训练数据包含数百万张动漫图和约 80 万张非动漫艺术图，不含合成数据。当前仅供非商业使用。
 
 ---
 
