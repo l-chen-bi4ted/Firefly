@@ -85,11 +85,11 @@ export const spineModelConfig: SpineModelConfig = {
 // Live2D 看板娘配置 (使用 l2d-widget 库，文档：https://l2d-widget.hacxy.cn)
 export const live2dWidgetConfig: Live2DWidgetConfig = {
 	// Live2D 看板娘开关
-	enable: false,
+	enable: true,
 	// 模型配置，支持单个模型或数组（多模型切换）
 	model: {
 		// Live2D模型文件路径
-		path: "/pio/models/live2d/snow_miku/model.json",
+		path: "/pio/models/live2d/ariu/ariu.model3.json",
 		// 动作声音音量 0-1，默认 0（静音）
 		volume: 0,
 		// 模型缩放比例
@@ -142,12 +142,12 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 		// 气泡开关
 		enable: true,
 		// 初始欢迎消息
-		welcomeMessage: ["你好！我是Miku~", "欢迎来到我的世界！"],
+		welcomeMessage: ["你好！我是 Ario~", "欢迎来到我的世界！"],
 		// 循环提示内容
 		messages: [
 			"有什么需要帮助的吗？",
 			"今天天气真不错呢！",
-			"要不要一起玩游戏？",
+			"要一起玩吗？",
 			"记得按时休息哦！",
 		],
 		// 文字显示时间（ms）
