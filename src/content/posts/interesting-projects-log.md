@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-16
+updated: 2026-05-23
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,44 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-23 20:27
+
+**memU**  
+🔗 https://github.com/NevaMind-AI/memU
+
+24/7 全天候主动型 AI Agent 记忆框架。持续捕捉用户意图，文件系统式层级记忆架构（类别→条目→直接），大幅降低 LLM token 成本（约 1/10）。支持自定义 LLM / Embedding 提供商。OpenClaw 替代方案。Python + PostgreSQL (pgvector)。可云服务或自托管。
+
+---
+
+## 2026-05-23 12:50
+
+**GithubStarsManager**  
+🔗 https://github.com/AmintaCCCP/GithubStarsManager
+
+用 AI 整理 GitHub Star 的效率工具。自动同步 Star 仓库，AI 生成摘要、标签和分类；语义搜索按意图定位仓库；Release 订阅追踪 + 智能资产过滤（dmg/mac/arm64 等）与一键下载；发现/趋势频道（Trending / Hot Release / Most Popular / Topic / Search）。可选 Express + SQLite 后端支持跨设备同步。支持 OpenAI / Anthropic / Ollama 等多 AI 提供商。React 18 + TypeScript，桌面客户端 + Web 部署。MIT 许可。
+
+---
+
+## 2026-05-18 22:09
+
+**DiskWatch**  
+🔗 https://github.com/matthart1983/diskwatch
+
+单机磁盘诊断 TUI 工具。NetWatch / SysWatch 同系兄弟。8 个 Tab 面板覆盖容量趋势、IO 吞吐、p99 延迟、SMART 健康、热点文件，异常卡片自动定位问题根因。支持 SMART、NVMe、APFS、LVM、mdraid。MIT 许可，Rust 实现。
+
+---
+
+## 2026-05-18 19:46
+
+**Game Cheats Manager**  
+🔗 https://github.com/dyang886/Game-Cheats-Manager
+
+单机游戏修改器一站式管理和下载工具。多源聚合（风灵月影、小幸姐、Cheat Engine CT 表、官方自制、社区上传），中英文双语搜索，双击一键下载 + 自动解压归档。启动时后台静默检查更新。Windows Defender 一键白名单防误删，反作弊检测提示。社区驱动可上传分享。Windows 64-bit，开源免费。
+
+官网: https://gamezonelabs.com
 
 ---
 
@@ -181,6 +219,9 @@ Hermes Agent 的第三方全功能 Web 仪表板。AI 对话、8 平台频道配
 
 **UZI-Skill**  
 🔗 https://github.com/wbh604/UZI-Skill
+
+**QuantDinger**  
+🔗 https://github.com/brokermr810/QuantDinger
 
 项目仅作学习研究使用。不代表任何真实投资者的实际观点，不构成投资建议，投资有风险，决策需谨慎。
 
