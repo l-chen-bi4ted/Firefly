@@ -97,7 +97,7 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 		// X轴偏移
 		x: 0,
 		// Y轴偏移（负值上移，半身效果）
-		y: -0.8,
+		y: -0.3,
 	},
 	// 显示位置：bottom-left 或 bottom-right
 	position: "bottom-left" as const,
