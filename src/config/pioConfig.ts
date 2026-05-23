@@ -100,7 +100,7 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 		y: 1.2,
 	},
 	// 显示位置：bottom-left 或 bottom-right
-	position: "bottom-left" as const,
+	position: "bottom-right" as const,
 	// 画布尺寸（px）
 	size: { width: 280, height: 340 },
 	// 主题色，用于菜单、状态条等 UI 元素的背景色，默认 'rgba(96,165,250,0.9)'
