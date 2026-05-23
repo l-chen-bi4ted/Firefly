@@ -93,11 +93,11 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 		// 动作声音音量 0-1，默认 0（静音）
 		volume: 0,
 		// 模型缩放比例
-		scale: 2.0,
+		scale: 2.2,
 		// X轴偏移
 		x: 0,
 		// Y轴偏移（负值上移，半身效果）
-		y: -0.3,
+		y: 1.2,
 	},
 	// 显示位置：bottom-left 或 bottom-right
 	position: "bottom-left" as const,
