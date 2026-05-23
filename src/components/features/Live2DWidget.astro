@@ -52,13 +52,15 @@ const { config } = Astro.props;
 
 // 构建模型配置
 const models = Array.isArray(config.model) ? config.model : [config.model];
-const modelConfigs = models.map((m) => ({
-	path: url(m.path),
-	...(m.volume !== undefined && { volume: m.volume }),
-	...(m.scale !== undefined && { scale: m.scale }),
-	...(m.x !== undefined && { x: m.x }),
-	...(m.y !== undefined && { y: m.y }),
-}));
+const modelConfigs = models.map((m) => {
+	const mc: Record<string, unknown> = { path: url(m.path) };
+	if (m.volume !== undefined) mc.volume = m.volume;
+	if (m.scale !== undefined) mc.scale = m.scale;
+	if (m.x !== undefined || m.y !== undefined) {
+		mc.offset = [m.x ?? 0, -(m.y ?? 0)];
+	}
+	return mc;
+});
 
 // 序列化菜单配置（只保留 icon, label, action）
 function serializeMenus(menus: Props["config"]["menus"]) {
