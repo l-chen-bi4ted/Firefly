@@ -52,7 +52,6 @@ const { config } = Astro.props;
 
 // 构建模型配置
 const models = Array.isArray(config.model) ? config.model : [config.model];
-<<<<<<< HEAD
 const resolvePath = (p: string) => (/^https?:\/\//.test(p) ? p : url(p));
 
 const modelConfigs = models.map((m) => ({
@@ -63,7 +62,6 @@ const modelConfigs = models.map((m) => ({
 		offset: [m.x ?? 0, m.y ?? 0],
 	}),
 }));
->>>>>>> master
 
 // 序列化菜单配置（只保留 icon, label, action）
 function serializeMenus(menus: Props["config"]["menus"]) {

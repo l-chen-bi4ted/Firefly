@@ -6,7 +6,6 @@
 
 ## 🛠️ 关于本站
 
-<<<<<<< HEAD
 - 框架：**Astro**
 - 主题：[Firefly](https://github.com/CuteLeaf/Firefly)
 - 部署：https://z42.site
@@ -16,7 +15,6 @@
 <!-- - 💻 GitHub: [l-chen-bi4ted](https://github.com/l-chen-bi4ted) -->
 - ✉️ Email: [keen_awl_3f@icloud.com](mailto:keen_awl_3f@icloud.com)
 - 🌿 Solian: [echo42](https://solian.app/accounts/echo42)
->>>>>>> master
 
 ---
 
