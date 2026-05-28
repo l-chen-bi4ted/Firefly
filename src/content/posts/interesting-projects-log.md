@@ -1,7 +1,7 @@
 ---
 title: 有趣项目收集日志
 published: 2026-04-15
-updated: 2026-05-23
+updated: 2026-05-28
 description: 持续更新的 GitHub 项目与技术资料收集日志
 image: ./images/cover.avif
 tags: [GitHub, 开源项目, 工具, iOS, AI]
@@ -13,6 +13,33 @@ pinned: false
 # 有趣项目收集日志
 
 > 本页面持续更新，记录发现的有趣 GitHub 项目与技术资料。
+
+---
+
+## 2026-05-28 22:55
+
+**DOMD**  
+🔗 https://github.com/do-md/domd
+
+纯自研引擎的 Markdown 所见即所得编辑器，不依赖 ProseMirror/Slate/Lexical。内核仅 20 KB gzipped，单一数据源 + 不可变状态，1 MB 文档秒开。macOS 原生（Tauri）+ Quick Look 扩展（访达空格渲染 .md）。自带 domd-cli 对接 AI agent 流式写入。Web 版拖拽即用，文件不上传。极简无侧栏/标签页/同步/账号。
+
+---
+
+## 2026-05-24 22:56
+
+**HTML Anything**  
+🔗 https://github.com/nexu-io/html-anything
+
+面向 Agent 工作流的本地优先 HTML 编辑器。自动识别 8 种本地 Agent CLI（Claude Code / Cursor / Codex 等），零 API Key 复用已登录 session。75 套 Skill 模板 × 9 种输出场景（杂志/Deck/海报/小红书/X 卡片/Web 原型/数据报告/Hyperframes 视频）。SSE 流式渲染 + 沙箱预览，一键导出到微信公众号 / X / 知乎 / HTML / PNG。Next.js 构建，Apache-2.0。
+
+---
+
+## 2026-05-24 10:43
+
+**TextGO**  
+🔗 https://github.com/C5H12O5/TextGO
+
+跨平台智能文本识别与动作执行工具。选中文本后自动弹出工具栏，识别类型并执行预设操作。支持快捷键、鼠标双击、拖拽选中多触发方式，立即执行或工具栏交互两种模式。内置丰富文本类型与处理动作，可扩展正则/脚本/ML模型/本地云端AI。Tauri 构建，macOS / Windows / Linux，GPLv3。
 
 ---
 
