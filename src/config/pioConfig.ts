@@ -87,18 +87,22 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 	// Live2D 看板娘开关
 	enable: true,
 	// 模型配置，支持单个模型或数组（多模型切换）
-	model: {
-		// Live2D模型文件路径
-		path: "/pio/models/live2d/ariu/ariu.model3.json",
-		// 动作声音音量 0-1，默认 0（静音）
-		volume: 0,
-		// 模型缩放比例
-		scale: 2.2,
-		// X轴偏移
-		x: 0,
-		// Y轴偏移（负值上移，半身效果）
-		y: 1.2,
-	},
+<<<<<<< HEAD
+	model: [
+		{
+			// Live2D模型文件路径
+			path: "/pio/models/live2d/ariu/ariu.model3.json",
+			// 动作声音音量 0-1，默认 0（静音）
+			volume: 0,
+			// 模型缩放比例
+			scale: 2.2,
+			// X轴偏移，范围 -2~2，正值向右
+			x: 0,
+			// Y轴偏移，范围 -2~2，正值向上
+			y: -0.6,
+		},
+	],
+>>>>>>> master
 	// 显示位置：bottom-left 或 bottom-right
 	position: "bottom-right" as const,
 	// 画布尺寸（px）
@@ -124,9 +128,14 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 				action: "scrollToTop",
 			},
 			{
-				icon: "mdi:sleep",
+				icon: "mdi:bed",
 				label: "休眠",
 				action: "sleep",
+			},
+			{
+				icon: "mdi:swap-horizontal",
+				label: "切换模型",
+				action: "switchModel",
 			},
 			{
 				icon: "mdi:github",
@@ -142,7 +151,11 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 		// 气泡开关
 		enable: true,
 		// 初始欢迎消息
+<<<<<<< HEAD
 		welcomeMessage: ["你好！我是 Ario~", "欢迎来到我的世界！"],
+=======
+		welcomeMessage: ["你好呀！", "欢迎来到我的世界！"],
+>>>>>>> master
 		// 循环提示内容
 		messages: [
 			"有什么需要帮助的吗？",
