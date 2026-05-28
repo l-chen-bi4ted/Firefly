@@ -90,7 +90,7 @@ export const live2dWidgetConfig: Live2DWidgetConfig = {
 model: [
 		{
 			// Live2D模型文件路径
-			path: "/pio/models/live2d/ariu/ariu.model3.json",
+			path: "https://cdn.jsdelivr.net/gh/l-chen-bi4ted/Firefly@blog-dev/pio/models/live2d/ariu/ariu.model3.json",
 			// 动作声音音量 0-1，默认 0（静音）
 			volume: 0,
 			// 模型缩放比例
